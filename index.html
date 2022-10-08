@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hangman game</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div id="container">
-      <div id="hangman">
-        <div id="baseline"></div>
-        <div id="prependline"></div>
-        <div id="topbaseline"></div>
-        <div id="downline"></div>
-        <div class="hang" id="face"></div>
-        <div class="hang" id="middleline"></div>
-        <div class="hang" id="leftarm"></div>
-        <div class="hang" id="rightarm"></div>
-        <div class="hang" id="leftleg"></div>
-        <div class="hang" id="rightleg"></div>
-      </div>
-      <div id="Guess">
-        <div id="type">
-        <button class="button-40" role="button">Clothes</button>
-        <button class="button-40" role="button">Colors</button>
-        <button class="button-40" role="button">Sports</button>
-        <button class="button-40" role="button">Animals</button>
-      </div>
-        <button class="button" id="button" role="button">Start Game</button>
-      </div>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap 4 CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <title>Hangman</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="text-center">Hangman</h1>
+  <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+  <div class="text-center">
+    <img id='hangmanPic' src="./images/0.jpg" alt="">
+    <p>Guess the Programming Language:</p>
+    <p id="wordSpotlight">The word to be guessed goes here</p>
+    <div id="keyboard"></div>
+    <button class="btn btn-info" onClick="reset()">Reset</button>
+  </div> 
+</div>
+
+<script src='./js/hangman.js'></script>
+</body>
 </html>
