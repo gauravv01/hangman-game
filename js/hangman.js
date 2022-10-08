@@ -155,6 +155,7 @@ function reset() {
   guessed = [];
   document.getElementById("hangmanPic").src = "./images/0.jpg";
   document.getElementById('type').innerText='Select the type Below:';
+  document.getElementById("wordSpotlight").innerHTML='';
   updateMistakes();
   generateType();
 }
